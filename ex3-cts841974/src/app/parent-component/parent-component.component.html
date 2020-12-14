@@ -1,0 +1,12 @@
+<div>
+    <h2>Parent counter value(No of likes):{{like}}</h2>
+    <h2>Parent counter value(No of Dislikes):{{dislike}}</h2>
+    <br/>
+    <button (click)="handleClear()">Clear</button><br/><br/>
+    <app-child-component
+     (childCounter) = "like =$event"
+     (childCounter1) = "dislike =$event"
+     [clearLike] = "like"
+    [clearDislike] = "dislike">
+    </app-child-component>
+</div>
